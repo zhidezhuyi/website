@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>深圳值得注意科技有限公司</title>
-  <meta name="description" content="深圳值得注意科技有限公司 - 专注于数字化转型与技术创新，为企业提供全方位的技术解决方案">
+  <title>值得注意科技 — AI 与云驱动的企业数字化服务</title>
+  <meta name="description" content="深圳值得注意科技有限公司 - AI Agent、大模型应用、云计算与企业数字化转型服务，从咨询、实施到持续运营的全链路服务">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>Z</text></svg>">
 </head>
@@ -12,17 +12,18 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="container nav-container">
-      <a href="#" class="logo">
+      <a href="#home" class="logo">
         <span class="logo-icon">Z</span>
         <span class="logo-text">值得注意</span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">首页</a></li>
-        <li><a href="#about">关于我们</a></li>
-        <li><a href="#services">服务项目</a></li>
-        <li><a href="#advantages">核心优势</a></li>
+        <li><a href="#business">业务</a></li>
+        <li><a href="#capability">能力</a></li>
+        <li><a href="#approach">服务方式</a></li>
         <li><a href="#contact">联系我们</a></li>
       </ul>
+      <a href="#contact" class="btn btn-primary btn-nav">预约咨询</a>
       <button class="menu-toggle" id="menuToggle" aria-label="菜单">
         <span></span>
         <span></span>
@@ -34,26 +35,56 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <h1 class="hero-title fade-up">值得注意的技术力量</h1>
-      <p class="hero-subtitle fade-up delay-1">以技术创新驱动数字化转型，为企业创造可衡量的商业价值</p>
-      <div class="hero-actions fade-up delay-2">
-        <a href="#services" class="btn btn-primary">了解服务</a>
-        <a href="#contact" class="btn btn-outline">联系我们</a>
+    <div class="hero-grid-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge fade-up">
+          <span class="badge-dot"></span>
+          AI Agent · 大模型应用 · 云与数据 · 协同数字化
+        </div>
+        <h1 class="hero-title fade-up delay-1">
+          让 <span class="gradient-text">AI 与云</span><br>
+          成为企业增长的引擎
+        </h1>
+        <p class="hero-subtitle fade-up delay-2">
+          从大模型接入、AI Agent 开发，到云基础设施与协同数字化，<br class="desktop-br">
+          值得注意为企业提供从咨询、实施到持续运营的全链路服务。
+        </p>
+        <div class="hero-actions fade-up delay-3">
+          <a href="#business" class="btn btn-primary">了解我们的业务</a>
+          <a href="#contact" class="btn btn-ghost">预约咨询</a>
+        </div>
       </div>
-      <div class="hero-stats fade-up delay-3">
-        <div class="stat-item">
-          <span class="stat-number" data-target="50">0</span>+
-          <span class="stat-label">服务客户</span>
+      <div class="hero-visual fade-up delay-2">
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <span class="terminal-dot dot-red"></span>
+            <span class="terminal-dot dot-yellow"></span>
+            <span class="terminal-dot dot-green"></span>
+            <span class="terminal-title">zhidezhuyi — ai-agent</span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line">
+              <span class="prompt">➜</span>
+              <span class="cmd">agent.run("分析本月销售数据并生成报告")</span>
+            </div>
+            <div class="terminal-line output">
+              <span class="tag">思考</span>
+              <span class="typing-text" id="typingText"></span><span class="cursor"></span>
+            </div>
+            <div class="terminal-line output dim">
+              <span class="tag tag-blue">工具</span>
+              <span>query_database → generate_chart → write_report</span>
+            </div>
+            <div class="terminal-line output success">
+              <span class="tag tag-green">完成</span>
+              <span>报告已生成 · 耗时 3.2s · 节省人工 4 小时</span>
+            </div>
+          </div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="100">0</span>+
-          <span class="stat-label">成功案例</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-number" data-target="98">0</span>%
-          <span class="stat-label">客户满意度</span>
-        </div>
+        <div class="floating-chip chip-1">大模型接入</div>
+        <div class="floating-chip chip-2">AI Agent</div>
+        <div class="floating-chip chip-3">云基础设施</div>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -61,205 +92,260 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about" id="about">
+  <!-- Business Section -->
+  <section class="business" id="business">
     <div class="container">
       <div class="section-header fade-up">
-        <span class="section-tag">关于我们</span>
-        <h2 class="section-title">值得注意，值得信赖</h2>
-        <p class="section-desc">以技术为核心，以价值为导向</p>
+        <span class="section-tag">核心业务</span>
+        <h2 class="section-title">从 AI 到云，覆盖企业关键场景</h2>
+        <p class="section-desc">飞书与火山引擎双生态代理，加上自研交付能力，组合成完整的企业数字化服务</p>
       </div>
-      <div class="about-grid">
-        <div class="about-content fade-up">
-          <p>深圳值得注意科技有限公司成立于2025年，总部位于深圳市南山区万科云城。我们是一家专注于企业数字化转型与技术创新的高科技企业，致力于为各行业客户提供前沿的技术解决方案与专业的咨询服务。</p>
-          <p>公司汇聚了一批来自互联网大厂和顶尖科技企业的技术人才，在人工智能、云计算、大数据等领域拥有丰富的实战经验。我们秉承"值得注意，值得信赖"的理念，以客户需求为导向，以技术创新为驱动，帮助企业在数字化浪潮中抢占先机。</p>
-          <div class="about-highlights">
-            <div class="highlight-item">
-              <div class="highlight-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-              </div>
-              <div>
-                <h4>技术驱动</h4>
-                <p>持续跟踪前沿技术，将创新转化为商业价值</p>
-              </div>
-            </div>
-            <div class="highlight-item">
-              <div class="highlight-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <div>
-                <h4>客户至上</h4>
-                <p>深入理解业务场景，交付真正有效的解决方案</p>
-              </div>
-            </div>
-            <div class="highlight-item">
-              <div class="highlight-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              </div>
-              <div>
-                <h4>品质保障</h4>
-                <p>严格的质量管控体系，确保每一个项目的交付品质</p>
-              </div>
+      <div class="business-grid">
+        <div class="biz-card fade-up">
+          <div class="biz-card-top">
+            <span class="biz-label">飞书代理</span>
+            <div class="biz-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 2L11 13"/>
+                <path d="M22 2l-7 20-4-9-9-4 20-7z"/>
+              </svg>
             </div>
           </div>
-        </div>
-        <div class="about-visual fade-up delay-1">
-          <div class="visual-card">
-            <div class="visual-bg"></div>
-            <div class="visual-content">
-              <div class="year-badge">2025</div>
-              <h3>成立年份</h3>
-              <p>深圳 · 南山</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="services" id="services">
-    <div class="container">
-      <div class="section-header fade-up">
-        <span class="section-tag">服务项目</span>
-        <h2 class="section-title">全方位技术解决方案</h2>
-        <p class="section-desc">从战略规划到落地实施，提供全链路数字化服务</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card fade-up">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="2" y="3" width="20" height="14" rx="2"/>
-              <path d="M8 21h8M12 17v4"/>
-              <path d="M7 8l3 3-3 3M13 14h4"/>
-            </svg>
-          </div>
-          <h3>软件开发</h3>
-          <p>定制化企业级软件解决方案，涵盖Web应用、移动端App、小程序等多端开发，采用敏捷开发模式，快速迭代交付。</p>
-          <ul class="service-tags">
-            <li>Web应用</li>
-            <li>移动端开发</li>
-            <li>小程序</li>
-            <li>SaaS平台</li>
+          <h3>飞书代理与实施服务</h3>
+          <p>飞书代理商，提供咨询、实施、迁移、培训与持续运营服务，把飞书从协同工具落成企业统一工作入口。</p>
+          <ul class="biz-tags">
+            <li>流程与审批设计</li>
+            <li>多维表格系统</li>
+            <li>知识与项目协同</li>
+            <li>培训与运营</li>
           </ul>
+          <a href="#contact" class="biz-link">了解详情 →</a>
         </div>
-        <div class="service-card fade-up delay-1">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/>
-              <path d="M12 2a4 4 0 0 0-4 4c0 1.95 1.4 3.58 3.25 3.93"/>
-              <path d="M12 18v-8"/>
-              <circle cx="12" cy="20" r="2"/>
-              <path d="M7 14c0 0 2 4 5 4s5-4 5-4"/>
-              <path d="M5 8c0 0-2 6 7 6s7-6 7-6"/>
-            </svg>
+        <div class="biz-card fade-up delay-1">
+          <div class="biz-card-top">
+            <span class="biz-label">火山引擎代理</span>
+            <div class="biz-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2l1.9 5.8 5.8-1.9-4.5 4 4.5 4-5.8-1.9L12 18l-1.9-5.8-5.8 1.9 4.5-4-4.5-4 5.8 1.9L12 2z"/>
+                <circle cx="12" cy="10" r="1.5"/>
+                <path d="M5 20c2-1.5 4.5-2 7-2s5 .5 7 2"/>
+              </svg>
+            </div>
           </div>
-          <h3>人工智能</h3>
-          <p>基于大模型与机器学习技术，为企业构建智能客服、数据分析、内容生成等AI应用，赋能业务智能化升级。</p>
-          <ul class="service-tags">
-            <li>大模型应用</li>
-            <li>智能客服</li>
-            <li>数据分析</li>
-            <li>AIGC</li>
+          <h3>火山引擎代理</h3>
+          <p>火山引擎代理商，提供豆包大模型、火山方舟 Agent 平台、云基础设施与数据智能产品的接入与落地服务。</p>
+          <ul class="biz-tags">
+            <li>豆包大模型</li>
+            <li>火山方舟</li>
+            <li>云基础设施</li>
+            <li>数据智能</li>
           </ul>
+          <a href="#contact" class="biz-link">了解详情 →</a>
         </div>
-        <div class="service-card fade-up delay-2">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-            </svg>
+        <div class="biz-card fade-up delay-2">
+          <div class="biz-card-top">
+            <span class="biz-label">人工智能</span>
+            <div class="biz-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="4" y="4" width="16" height="16" rx="2"/>
+                <rect x="9" y="9" width="6" height="6"/>
+                <path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/>
+              </svg>
+            </div>
           </div>
-          <h3>数字化转型</h3>
-          <p>深入理解企业业务流程，提供从战略规划、系统选型到实施落地的全链路数字化转型咨询服务。</p>
-          <ul class="service-tags">
-            <li>战略规划</li>
-            <li>流程优化</li>
-            <li>系统集成</li>
-            <li>数据治理</li>
+          <h3>AI Agent 与大模型应用</h3>
+          <p>基于主流大模型构建智能体、企业知识库与 AI 工作流，让 AI 真正进入业务流程，处理真实工作。</p>
+          <ul class="biz-tags">
+            <li>大模型接入</li>
+            <li>智能体开发</li>
+            <li>RAG 知识库</li>
+            <li>AI 工作流</li>
           </ul>
+          <a href="#contact" class="biz-link">了解详情 →</a>
         </div>
-        <div class="service-card fade-up delay-3">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
-            </svg>
+        <div class="biz-card fade-up">
+          <div class="biz-card-top">
+            <span class="biz-label">云与数据</span>
+            <div class="biz-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+              </svg>
+            </div>
           </div>
-          <h3>云计算服务</h3>
-          <p>提供云架构设计、云迁移、多云管理及运维服务，帮助企业实现IT基础设施的弹性扩展与降本增效。</p>
-          <ul class="service-tags">
+          <h3>云计算与数据智能</h3>
+          <p>云架构设计、弹性算力与数据中台建设，为企业构建稳定、高效、安全的数据与算力底座。</p>
+          <ul class="biz-tags">
             <li>云架构设计</li>
             <li>云迁移</li>
-            <li>DevOps</li>
-            <li>运维管理</li>
-          </ul>
-        </div>
-        <div class="service-card fade-up">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="3" y="11" width="18" height="11" rx="2"/>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-              <circle cx="12" cy="16" r="1"/>
-            </svg>
-          </div>
-          <h3>网络安全</h3>
-          <p>提供全面的安全评估、渗透测试、合规咨询及安全运营服务，保障企业数字资产安全与合规。</p>
-          <ul class="service-tags">
-            <li>安全评估</li>
-            <li>渗透测试</li>
-            <li>合规咨询</li>
-            <li>安全运营</li>
-          </ul>
-        </div>
-        <div class="service-card fade-up delay-1">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-              <line x1="12" y1="22.08" x2="12" y2="12"/>
-            </svg>
-          </div>
-          <h3>大数据</h3>
-          <p>搭建数据中台与智能分析平台，实现数据的采集、治理、分析及可视化，驱动数据赋能业务决策。</p>
-          <ul class="service-tags">
             <li>数据中台</li>
-            <li>数据可视化</li>
-            <li>BI分析</li>
-            <li>数据治理</li>
+            <li>安全合规</li>
+          </ul>
+          <a href="#contact" class="biz-link">了解详情 →</a>
+        </div>
+        <div class="biz-card fade-up delay-1">
+          <div class="biz-card-top">
+            <span class="biz-label">组织协同</span>
+            <div class="biz-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+          </div>
+          <h3>协同与组织数字化</h3>
+          <p>以协同平台为核心，打通流程审批、业务表单与知识管理，把协同工具落成企业统一工作入口。</p>
+          <ul class="biz-tags">
+            <li>流程与审批</li>
+            <li>多维表格系统</li>
+            <li>知识库</li>
+            <li>系统集成</li>
+          </ul>
+          <a href="#contact" class="biz-link">了解详情 →</a>
+        </div>
+        <div class="biz-card fade-up delay-2">
+          <div class="biz-card-top">
+            <span class="biz-label">软件工程</span>
+            <div class="biz-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+          </div>
+          <h3>软件定制开发</h3>
+          <p>企业级 Web 应用、移动端与 SaaS 平台定制开发，敏捷交付，两周一个迭代，持续交付可用价值。</p>
+          <ul class="biz-tags">
+            <li>Web 应用</li>
+            <li>移动端</li>
+            <li>小程序</li>
+            <li>SaaS 平台</li>
+          </ul>
+          <a href="#contact" class="biz-link">了解详情 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capability Section -->
+  <section class="capability" id="capability">
+    <div class="capability-bg"></div>
+    <div class="container">
+      <div class="section-header fade-up">
+        <span class="section-tag section-tag-dark">能力体系</span>
+        <h2 class="section-title">连接 AI 与云，把能力落进真实业务</h2>
+        <p class="section-desc">能力底座 × 工程化落地，组合成一套完整的企业数字化能力</p>
+      </div>
+      <div class="capability-combo fade-up">
+        <div class="cap-card">
+          <div class="cap-card-header">
+            <span class="cap-badge">能力底座</span>
+            <h3>AI 与云能力</h3>
+            <p>大模型、数据智能与云基础设施，为企业提供坚实的技术底座。</p>
+          </div>
+          <ul class="cap-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              大模型服务
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              Agent 能力
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              数据智能
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              云基础设施
+            </li>
+          </ul>
+        </div>
+        <div class="cap-connector">
+          <span>×</span>
+        </div>
+        <div class="cap-card">
+          <div class="cap-card-header">
+            <span class="cap-badge cap-badge-alt">落地保障</span>
+            <h3>工程化落地</h3>
+            <p>从诊断到运营的全流程方法论，确保方案真正用起来、跑下去。</p>
+          </div>
+          <ul class="cap-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              业务诊断
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              方案共创
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              敏捷交付
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              持续运营
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Advantages Section -->
-  <section class="advantages" id="advantages">
+  <!-- Approach Section -->
+  <section class="approach" id="approach">
     <div class="container">
       <div class="section-header fade-up">
-        <span class="section-tag">核心优势</span>
-        <h2 class="section-title">为什么选择我们</h2>
-        <p class="section-desc">专业团队 + 成熟方法论 = 可预期的交付成果</p>
+        <span class="section-tag">服务方式</span>
+        <h2 class="section-title">深入业务现场，让技术持续创造价值</h2>
+        <p class="section-desc">从流程诊断、方案共创到场景交付与持续优化，推动技术真正落地</p>
       </div>
-      <div class="advantages-grid">
-        <div class="advantage-card fade-up">
-          <div class="advantage-number">01</div>
-          <h3>顶尖技术团队</h3>
-          <p>核心成员来自一线互联网企业，平均8年以上行业经验，具备从0到1的产品与工程能力。</p>
+      <div class="approach-steps">
+        <div class="step-card fade-up">
+          <div class="step-number">01</div>
+          <h3>业务诊断</h3>
+          <p>深入业务现场梳理关键流程，定位真正值得解决的问题与机会点。</p>
         </div>
-        <div class="advantage-card fade-up delay-1">
-          <div class="advantage-number">02</div>
-          <h3>敏捷交付模式</h3>
-          <p>采用Scrum敏捷开发方法论，两周一迭代，持续交付可用价值，确保项目可控可预期。</p>
+        <div class="step-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
-        <div class="advantage-card fade-up delay-2">
-          <div class="advantage-number">03</div>
-          <h3>全栈技术能力</h3>
-          <p>从前端到后端，从移动端到云端，从数据到AI，一站式覆盖企业数字化全场景需求。</p>
+        <div class="step-card fade-up delay-1">
+          <div class="step-number">02</div>
+          <h3>方案共创</h3>
+          <p>把业务目标转化为可体验、可验证的技术方案，先看见再投入。</p>
         </div>
-        <div class="advantage-card fade-up delay-3">
-          <div class="advantage-number">04</div>
-          <h3>深度行业理解</h3>
-          <p>深耕金融、零售、制造、教育等行业，理解业务本质，提供真正贴合场景的解决方案。</p>
+        <div class="step-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
+        <div class="step-card fade-up delay-2">
+          <div class="step-number">03</div>
+          <h3>场景交付</h3>
+          <p>敏捷开发、小步快跑，两周一迭代，持续交付可用的业务价值。</p>
+        </div>
+        <div class="step-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+        <div class="step-card fade-up delay-3">
+          <div class="step-number">04</div>
+          <h3>持续运营</h3>
+          <p>上线只是开始，持续优化与陪跑，让系统随业务一起进化。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <div class="cta-text">
+          <h2>预约顾问，获取适合企业的 AI 与数字化方案</h2>
+          <p>聊聊你的业务场景，我们一起看看技术能帮上什么忙。</p>
+        </div>
+        <a href="#contact" class="btn btn-light">联系我们</a>
       </div>
     </div>
   </section>
@@ -270,7 +356,7 @@
       <div class="section-header fade-up">
         <span class="section-tag">联系我们</span>
         <h2 class="section-title">开启数字化之旅</h2>
-        <p class="section-desc">期待与您的合作，共同探索数字化的无限可能</p>
+        <p class="section-desc">期待与您的合作，共同探索 AI 与数字化的无限可能</p>
       </div>
       <div class="contact-grid">
         <div class="contact-info fade-up">
@@ -308,7 +394,7 @@
             </div>
             <div>
               <h4>官方网站</h4>
-              <p><a href="https://www.zhidezhuyi.com" target="_blank">www.zhidezhuyi.com</a></p>
+              <p><a href="https://www.zhidezhuyi.com" target="_blank" rel="noopener noreferrer">www.zhidezhuyi.com</a></p>
             </div>
           </div>
         </div>
@@ -338,39 +424,49 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo">
+          <a href="#home" class="logo">
             <span class="logo-icon">Z</span>
             <span class="logo-text">值得注意</span>
           </a>
-          <p>以技术创新驱动数字化转型<br>为企业创造可衡量的商业价值</p>
+          <p>让 AI 与云，成为企业增长的引擎</p>
         </div>
         <div class="footer-links">
-          <h4>快速链接</h4>
+          <h4>业务</h4>
           <ul>
-            <li><a href="#about">关于我们</a></li>
-            <li><a href="#services">服务项目</a></li>
-            <li><a href="#advantages">核心优势</a></li>
+            <li><a href="#business">飞书代理与实施</a></li>
+            <li><a href="#business">火山引擎代理</a></li>
+            <li><a href="#business">AI Agent 与大模型</a></li>
+            <li><a href="#business">软件定制开发</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>公司</h4>
+          <ul>
+            <li><a href="#capability">能力体系</a></li>
+            <li><a href="#approach">服务方式</a></li>
             <li><a href="#contact">联系我们</a></li>
           </ul>
         </div>
-        <div class="footer-links">
-          <h4>服务项目</h4>
-          <ul>
-            <li><a href="#services">软件开发</a></li>
-            <li><a href="#services">人工智能</a></li>
-            <li><a href="#services">数字化转型</a></li>
-            <li><a href="#services">云计算服务</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>联系方式</h4>
-          <p>深圳市南山区万科云城</p>
-          <p><a href="mailto:houcan@zhidezhuyi.com">houcan@zhidezhuyi.com</a></p>
-          <p><a href="https://www.zhidezhuyi.com" target="_blank">www.zhidezhuyi.com</a></p>
+        <div class="footer-qr">
+          <h4>扫码交流</h4>
+          <div class="qr-items">
+            <div class="qr-item">
+              <img src="images/qr-personal.png" alt="销售负责人飞书二维码">
+              <span>销售负责人</span>
+            </div>
+            <div class="qr-item">
+              <img src="images/qr-feishu.png" alt="飞书咨询群二维码">
+              <span>飞书咨询群</span>
+            </div>
+            <div class="qr-item">
+              <img src="images/qr-volc.png" alt="火山咨询群二维码">
+              <span>火山咨询群</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 深圳值得注意科技有限公司 版权所有</p>
+        <p>&copy; 2026 深圳值得注意科技有限公司 版权所有</p>
         <p><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026057178号</a></p>
       </div>
     </div>

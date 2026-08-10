@@ -57,14 +57,9 @@ var backToTop = document.getElementById('backToTop');
 var menuToggle = document.getElementById('menuToggle');
 var navLinks = document.getElementById('navLinks');
 var fadeElements = document.querySelectorAll('.fade-up');
-var statsSection = document.querySelector('.hero-stats');
 var contactForm = document.getElementById('contactForm');
 var sections = document.querySelectorAll('section[id]');
-var requestFrame = window.requestAnimationFrame || function (callback) {
-  return window.setTimeout(function () {
-    callback((window.performance && typeof window.performance.now === 'function') ? window.performance.now() : new Date().getTime());
-  }, 16);
-};
+var typingText = document.getElementById('typingText');
 
 function getScrollY() {
   return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
@@ -144,47 +139,48 @@ if (fadeElements.length) {
   }
 }
 
-function animateCounters() {
-  var counters = document.querySelectorAll('.stat-number');
+/* ===== 终端打字动画 ===== */
+if (typingText) {
+  var typingPhrases = [
+    '正在调用销售数据接口，聚合本月订单...',
+    '识别出 3 个高增长品类与 2 个异常渠道...',
+    '生成趋势图表，撰写分析结论与建议...'
+  ];
+  var phraseIndex = 0;
+  var charIndex = 0;
+  var deleting = false;
 
-  forEachNode(counters, function (counter) {
-    var target = parseInt(counter.getAttribute('data-target'), 10) || 0;
-    var duration = 2000;
-    var startTime = (window.performance && typeof window.performance.now === 'function') ? window.performance.now() : new Date().getTime();
+  function typeLoop() {
+    var phrase = typingPhrases[phraseIndex];
 
-    function updateCounter(currentTime) {
-      var elapsed = currentTime - startTime;
-      var progress = Math.min(elapsed / duration, 1);
-      var eased = 1 - Math.pow(1 - progress, 3);
+    if (!deleting) {
+      charIndex += 1;
+      typingText.textContent = phrase.slice(0, charIndex);
 
-      counter.textContent = Math.round(target * eased);
-
-      if (progress < 1) {
-        requestFrame(updateCounter);
+      if (charIndex >= phrase.length) {
+        deleting = true;
+        window.setTimeout(typeLoop, 2200);
+        return;
       }
+      window.setTimeout(typeLoop, 55);
+    } else {
+      charIndex -= 1;
+      typingText.textContent = phrase.slice(0, charIndex);
+
+      if (charIndex <= 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % typingPhrases.length;
+        window.setTimeout(typeLoop, 500);
+        return;
+      }
+      window.setTimeout(typeLoop, 22);
     }
-
-    requestFrame(updateCounter);
-  });
-}
-
-if (statsSection) {
-  if ('IntersectionObserver' in window) {
-    var statsObserver = new IntersectionObserver(function (entries) {
-      forEachNode(entries, function (entry) {
-        if (entry.isIntersecting || entry.intersectionRatio > 0) {
-          animateCounters();
-          statsObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    statsObserver.observe(statsSection);
-  } else {
-    animateCounters();
   }
+
+  window.setTimeout(typeLoop, 800);
 }
 
+/* ===== 联系表单（mailto 兜底） ===== */
 if (contactForm) {
   contactForm.addEventListener('submit', function (event) {
     var name = document.getElementById('name');

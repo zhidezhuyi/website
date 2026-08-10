@@ -20,7 +20,9 @@
       "Bash(bash *)",
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(openssl s_client -servername zhidezhuyi.com -connect zhidezhuyi.com:443)",
+      "Bash(openssl x509 *)"
     ]
   }
 }
