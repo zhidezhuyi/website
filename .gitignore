@@ -1,2 +1,5 @@
 .DS_Store
+
+# AI 工具的本机配置；项目维护约定统一放在 AGENTS.md
 .claude/
+.codex/
